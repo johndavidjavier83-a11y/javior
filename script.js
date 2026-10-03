@@ -9,7 +9,7 @@ const academicWorks = [
 
             {
                 name: "Quiz ",
-                path: "Quiz.png.jfif";
+                path: "Quiz.png.jfif",
             },
 
             {
@@ -19,7 +19,7 @@ const academicWorks = [
 
             {
                 name: "Quiz Picture",
-                path: "files/quiz/quiz-picture.jpg"
+                path: "Quiz.png.jfif",
             }
 
         ]
