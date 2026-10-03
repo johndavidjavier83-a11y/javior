@@ -8,8 +8,8 @@ const academicWorks = [
         files: [
 
             {
-                name: "Quiz 1",
-                path: "Quiz.png";
+                name: "Quiz ",
+                path: "Quiz.png.jfif";
             },
 
             {
