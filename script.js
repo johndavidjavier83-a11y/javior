@@ -9,7 +9,7 @@ const academicWorks = [
 
             {
                 name: "Quiz 1",
-                path: "files/quiz/quiz-1.pdf"
+                path: "Quiz.png";
             },
 
             {
