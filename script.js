@@ -14,7 +14,7 @@ const academicWorks = [
 
             {
                 name: "Quiz 2",
-                path: "files/quiz/quiz-2.pdf"
+                path: "https://raw.githubusercontent.com/johndavidjavier83-a11y/javior/refs/heads/main/Quiz.png.jfif"
             },
 
             {
