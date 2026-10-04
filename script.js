@@ -16,8 +16,8 @@ const academicWorks = [
             },
             {
                 name: "Quiz Picture",
-                path:"JPG"
-            }
+                path:
+            }"Quiz.png.jfif",
         ]
     },
 
