@@ -84,7 +84,7 @@ const academicWorks = [
         files: [
             {
                 name: "Activity 1",
-                path: "files/activity/activity-1.pdf"
+                path: "DCIT 26_ Activity 1.docx (1).pdf"
             },
             {
                 name: "Activity 2",
