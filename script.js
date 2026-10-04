@@ -9,7 +9,7 @@ const academicWorks = [
 
             {
                 name: "Quiz ",
-                path: "Quiz.png.jfif",
+                path: "quiz1.jpeg.JPG",
             },
 
             {
