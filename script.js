@@ -8,7 +8,7 @@ const academicWorks = [
         files: [
             {
                 name: "Quiz 1",
-                path: 
+                path: "https://github.com/johndavidjavier83-a11y/javior/blob/main/quiz1.jpeg.JPG?raw=true"
             },
             {
                 name: "Quiz 2",
