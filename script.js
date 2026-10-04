@@ -9,12 +9,12 @@ const academicWorks [
 
             {
                 name: "Quiz ",
-                path: "https://github.com/johndavidjavier83-a11y/javior/blob/main/quiz1.jpeg.JPG?raw=true"
+                path: "quiz1.jpeg.JPG"
             },
 
             {
                 name: "Quiz 2",
-                path: "https://github.com/johndavidjavier83-a11y/javior/blob/main/quiz1.jpeg.JPG?raw=true"
+                path: "quiz1.jpeg.JPG"
             },
 
             {
