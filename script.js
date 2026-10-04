@@ -11,12 +11,12 @@ const academicWorks = [
                 path: "quiz1.jpeg.JPG"
             },
             {
-                name: "Quiz 2",
-                path: ""
+                name: "Quiz",
+                path: "Quiz.png.jfif"
             },
             {
                 name: "Quiz Picture",
-                path:"quiz1.jpeg.JPG"
+                path:"JPG"
             }
         ]
     },
