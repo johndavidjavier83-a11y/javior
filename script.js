@@ -95,7 +95,7 @@ const academicWorks = [
 
             {
                 name: "Activity 2",
-                path: "https://github.com/johndavidjavier83-a11y/javior/blob/main/DCIT%2026_%20Activity%201.docx%20(1).pdf"
+                path: 
             },
 
             {
