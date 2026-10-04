@@ -90,12 +90,12 @@ const academicWorks [
 
             {
                 name: "Activity 1",
-                path: "DCIT 26_ Activity 1.docx (1).pdf"
+                path: 
             },
 
             {
                 name: "Activity 2",
-                path: "DCIT26_ Act 2.docx (1).pdf"
+                path: 
             },
 
             {
