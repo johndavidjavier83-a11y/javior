@@ -9,12 +9,12 @@ const academicWorks = [
 
             {
                 name: "Quiz ",
-                path: 
+                path: "https://github.com/johndavidjavier83-a11y/javior/blob/main/quiz1.jpeg.JPG?raw=true",
             },
 
             {
                 name: "Quiz 2",
-                path: "quiz1.jpeg.JPG"
+                path: "https://github.com/johndavidjavier83-a11y/javior/blob/main/quiz1.jpeg.JPG?raw=true",
             },
 
             {
@@ -57,7 +57,7 @@ const academicWorks = [
 
             {
                 name: "Midterm Picture",
-                path: "files/midterms/midterm.jpg"
+                path: "files/midterms/midterm.jpg",
             }
 
         ]
@@ -95,7 +95,7 @@ const academicWorks = [
 
             {
                 name: "Activity 2",
-                path: "DCIT26_ Act 2.docx (1).pdf"
+                path: "DCIT26_ Act 2.docx (1).pdf",
             },
 
             {
