@@ -90,7 +90,7 @@ const academicWorks = [
 
             {
                 name: "Activity 1",
-                path: 
+                path: "DCIT 26_ Activity 1.docx (1).pdf"
             },
 
             {
