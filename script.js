@@ -4,22 +4,22 @@ const academicWorks [
 
     {
         title: "Quiz",
-        description: "Collection of my quizzes and short assessments.",
+        description: "Collection of my quizzes and short assessments."
         files: [
 
             {
                 name: "Quiz ",
-                path: "https://github.com/johndavidjavier83-a11y/javior/blob/main/quiz1.jpeg.JPG?raw=true",
+                path: "https://github.com/johndavidjavier83-a11y/javior/blob/main/quiz1.jpeg.JPG?raw=true"
             },
 
             {
                 name: "Quiz 2",
-                path: "https://github.com/johndavidjavier83-a11y/javior/blob/main/quiz1.jpeg.JPG?raw=true",
+                path: "https://github.com/johndavidjavier83-a11y/javior/blob/main/quiz1.jpeg.JPG?raw=true"
             },
 
             {
                 name: "Quiz Picture",
-                path: "Quiz.png.jfif",
+                path: "Quiz.png.jfif"
             }
 
         ]
@@ -57,7 +57,7 @@ const academicWorks [
 
             {
                 name: "Midterm Picture",
-                path: "files/midterms/midterm.jpg",
+                path: "files/midterms/midterm.jpg"
             }
 
         ]
@@ -90,12 +90,12 @@ const academicWorks [
 
             {
                 name: "Activity 1",
-                path: "DCIT 26_ Activity 1.docx (1).pdf",
+                path: "DCIT 26_ Activity 1.docx (1).pdf"
             },
 
             {
                 name: "Activity 2",
-                path: "DCIT26_ Act 2.docx (1).pdf",
+                path: "DCIT26_ Act 2.docx (1).pdf"
             },
 
             {
