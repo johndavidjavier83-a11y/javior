@@ -95,7 +95,7 @@ const academicWorks = [
 
             {
                 name: "Activity 2",
-                path: 
+                path: "DCIT26_ Act 2.docx (1).pdf"
             },
 
             {
