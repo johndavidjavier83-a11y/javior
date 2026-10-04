@@ -7,7 +7,7 @@ const academicWorks = [
         description: "Collection of my quizzes and short assessments.",
         files: [
             {
-                name: "Quiz",
+                name: "quiz",
                 path: "quiz1.jpeg.JPG"
             },
             {
