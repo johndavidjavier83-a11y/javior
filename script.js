@@ -1,16 +1,14 @@
 
 const academicWorks = [
 
-    // =========================
-    // QUIZ
-    // =========================
+    
     {
         title: "Quiz",
         description: "Collection of my quizzes and short assessments.",
         files: [
             {
                 name: "Quiz 1",
-                path: quiz1.jpeg.JPG
+                path: 
             },
             {
                 name: "Quiz 2",
