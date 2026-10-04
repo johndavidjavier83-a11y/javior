@@ -10,7 +10,7 @@ const academicWorks = [
         files: [
             {
                 name: "Quiz 1",
-                path: 
+                path: quiz1.jpeg.JPG
             },
             {
                 name: "Quiz 2",
