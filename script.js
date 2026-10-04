@@ -12,7 +12,7 @@ const academicWorks = [
             },
             {
                 name: "Quiz 2",
-                path: "quiz1.jpeg.JPG"
+                path: ""
             },
             {
                 name: "Quiz Picture",
@@ -23,7 +23,7 @@ const academicWorks = [
 
     // =========================
     // LONG QUIZ
-    // =========================
+    // ====Quiz.png.jfif=====================
     {
         title: "Long Quiz",
         description: "Collection of my long quizzes and assessments.",
