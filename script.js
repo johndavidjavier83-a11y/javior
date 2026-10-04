@@ -1,6 +1,6 @@
 
 
-const academicWorks [
+const academicWorks  = [
 
     {
         title: "Quiz",
