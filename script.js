@@ -88,7 +88,7 @@ const academicWorks = [
             },
             {
                 name: "Activity 2",
-                path: "files/activity/activity-2.pdf"
+                path: ""
             },
             {
                 name: "Activity Picture",
