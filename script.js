@@ -9,7 +9,7 @@ const academicWorks = [
 
             {
                 name: "Quiz ",
-                path: 
+                path: "https://github.com/johndavidjavier83-a11y/javior/blob/main/quiz1.jpeg.JPG?raw=true"
             },
 
             {
