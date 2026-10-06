@@ -12,13 +12,13 @@ const academicWorks = [
             },
             {
                 name: "Quiz",
-                path: "Quiz.png.jfif"
+                path: "quiz1.jpeg.JPG",
             },
             {
                 name: "Quiz Picture",
-                path:
-            }"Quiz.png.jfif",
-        ]
+                path: "quiz1.jpeg.JPG",
+            
+        
     },
 
     // =========================
