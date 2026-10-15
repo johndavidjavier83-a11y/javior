@@ -7,8 +7,8 @@ const academicWorks = [
         title: "quiz 1",
         description: "My first quiz.",
         category: "Quiz",
-        file: "",
-        type: "image"
+        file: "quiz1.jpeg.JPG"
+        type: "image",
     },
     {
         title: "Quiz 2",
@@ -20,7 +20,7 @@ const academicWorks = [
     {
         title: "Quiz 3",
         description: "My third quiz.",
-        category: "Quiz",
+        category: "Quiz",quiz1.jpeg.JPG
         file: "files/quiz-3.pdf",
         type: "file"
     },
