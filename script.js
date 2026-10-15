@@ -4,11 +4,11 @@ const academicWorks = [
     // 5 QUIZZES
     // =========================
     {
-        title: "Quiz 1",
+        title: "quiz 1",
         description: "My first quiz.",
         category: "Quiz",
-        file: "files/quiz-1.pdf",
-        type: "file"
+        file: "",
+        type: "image"
     },
     {
         title: "Quiz 2",
