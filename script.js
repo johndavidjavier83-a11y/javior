@@ -9,8 +9,8 @@ const academicWorks = [
         description: "Collection of my quizzes and short assessments.",
         files: [
             {
-                name: "Quiz 1",
-                path: "quiz1.jpeg.JPG"
+                name: "Quiz 1"
+                path: "quiz1.jpeg.JPG",
             },
             {
                 name: "Quiz 2",
