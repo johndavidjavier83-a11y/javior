@@ -1,207 +1,255 @@
 
-/* =========================================
-   ACADEMIC WORKS
-========================================= */
-
 const academicWorks = [
+    // =========================
+    // 5 QUIZZES
+    // =========================
     {
-        title: "Quiz",
-        description: "Collection of my quizzes and short assessments.",
-        files: [
-            {
-                name: "Quiz 1"
-                path: "quiz1.jpeg.JPG",
-            },
-            {
-                name: "Quiz 2",
-                path: "quiz1.jpeg.JPG"
-            },
-            {
-                name: "Quiz Picture",
-                path: "quiz1.jpeg.JPG"
-            }
-        ]
+        title: "Quiz 1",
+        description: "My first quiz.",
+        category: "Quiz",
+        file: "files/quiz-1.pdf",
+        type: "file"
+    },
+    {
+        title: "Quiz 2",
+        description: "My second quiz.",
+        category: "Quiz",
+        file: "files/quiz-2.pdf",
+        type: "file"
+    },
+    {
+        title: "Quiz 3",
+        description: "My third quiz.",
+        category: "Quiz",
+        file: "files/quiz-3.pdf",
+        type: "file"
+    },
+    {
+        title: "Quiz 4",
+        description: "My fourth quiz.",
+        category: "Quiz",
+        file: "files/quiz-4.pdf",
+        type: "file"
+    },
+    {
+        title: "Quiz 5",
+        description: "My fifth quiz.",
+        category: "Quiz",
+        file: "files/quiz-5.pdf",
+        type: "file"
     },
 
+    // =========================
+    // 5 LONG QUIZZES
+    // =========================
     {
-        title: "Long Quiz",
-        description: "Collection of my long quizzes and assessments.",
-        files: [
-            {
-                name: "Long Quiz 1",
-                path: "files/long-quiz/long-quiz-1.pdf"
-            },
-            {
-                name: "Long Quiz 2",
-                path: "files/long-quiz/long-quiz-2.pdf"
-            }
-        ]
+        title: "Long Quiz 1",
+        description: "My first long quiz.",
+        category: "Long Quiz",
+        file: "files/long-quiz-1.pdf",
+        type: "file"
+    },
+    {
+        title: "Long Quiz 2",
+        description: "My second long quiz.",
+        category: "Long Quiz",
+        file: "files/long-quiz-2.pdf",
+        type: "file"
+    },
+    {
+        title: "Long Quiz 3",
+        description: "My third long quiz.",
+        category: "Long Quiz",
+        file: "files/long-quiz-3.pdf",
+        type: "file"
+    },
+    {
+        title: "Long Quiz 4",
+        description: "My fourth long quiz.",
+        category: "Long Quiz",
+        file: "files/long-quiz-4.pdf",
+        type: "file"
+    },
+    {
+        title: "Long Quiz 5",
+        description: "My fifth long quiz.",
+        category: "Long Quiz",
+        file: "files/long-quiz-5.pdf",
+        type: "file"
     },
 
+    // =========================
+    // 5 ACTIVITIES
+    // =========================
     {
-        title: "Midterms",
-        description: "My midterm examination works and files.",
-        files: [
-            {
-                name: "Midterm Examination",
-                path: "files/midterms/midterm.pdf"
-            },
-            {
-                name: "Midterm Picture",
-                path: "files/midterms/midterm.jpg"
-            }
-        ]
+        title: "Activity 1",
+        description: "My first activity.",
+        category: "Activity",
+        file: "files/activity-1.pdf",
+        type: "file"
     },
-
     {
-        title: "Finals",
-        description: "My final examination works and requirements.",
-        files: [
-            {
-                name: "Final Examination",
-                path: "files/finals/final-examination.pdf"
-            },
-            {
-                name: "Final Exam Picture",
-                path: "files/finals/final-picture.jpg"
-            }
-        ]
+        title: "Activity 2",
+        description: "My second activity.",
+        category: "Activity",
+        file: "files/activity-2.pdf",
+        type: "file"
     },
-
     {
-        title: "Activity",
-        description: "Collection of my academic activities and assignments.",
-        files: [
-            {
-                name: "Activity 1",
-                path: "DCIT 26_ Activity 1.docx (1).pdf"
-            },
-            {
-                name: "Activity 2",
-                path: "DCIT26_ Act 2.docx (1).pdf"
-            },
-            {
-                name: "Activity Picture",
-                path: "files/activity/activity-picture.jpg"
-            }
-        ]
+        title: "Activity 3",
+        description: "My third activity.",
+        category: "Activity",
+        file: "files/activity-3.pdf",
+        type: "file"
     },
-
     {
-        title: "Laboratory",
-        description: "My programming laboratory activities and outputs.",
-        files: []
+        title: "Activity 4",
+        description: "My fourth activity.",
+        category: "Activity",
+        file: "files/activity-4.pdf",
+        type: "file"
     },
-
     {
-        title: "Project",
-        description: "Collection of my projects and major academic outputs.",
-        files: [
-            {
-                name: "Project 1",
-                path: "files/project/project-1.pdf"
-            },
-            {
-                name: "Project Picture",
-                path: "files/project/project-picture.jpg"
-            }
-        ]
+        title: "Activity 5",
+        description: "My fifth activity.",
+        category: "Activity",
+        file: "files/activity-5.pdf",
+        type: "file"
     }
 ];
 
+// Categories displayed on the portfolio
+const categories = [
+    "All Works",
+    "Quiz",
+    "Long Quiz",
+    "Midterm Exam",
+    "Final Exam",
+    "Activity",
+    "Project"
+];
 
-/* =========================================
-   CREATE CATEGORY CARDS
-========================================= */
+const categoryIcons = {
+    "Quiz": "✎",
+    "Long Quiz": "☷",
+    "Midterm Exam": "▤",
+    "Final Exam": "▣",
+    "Activity": "✦",
+    "Project": "⌘"
+};
 
-const categoriesContainer = document.getElementById("categories");
+// Get the website elements
+const filters = document.getElementById("filters");
+const worksGrid = document.getElementById("worksGrid");
+const emptyMessage = document.getElementById("emptyMessage");
 
-function createCategories() {
-    if (!categoriesContainer) {
-        console.error(
-            "Element with id='categories' was not found."
-        );
-        return;
-    }
+let activeCategory = "All Works";
 
-    categoriesContainer.innerHTML = "";
+// Create category buttons
+function createFilters() {
+    filters.replaceChildren();
 
-    academicWorks.forEach((category, index) => {
-        const card = document.createElement("div");
-        card.className = "category-card";
+    categories.forEach(function(category) {
+        const button = document.createElement("button");
 
-        const number = document.createElement("div");
-        number.className = "category-number";
-        number.textContent = String(index + 1).padStart(2, "0");
+        button.type = "button";
+        button.className = "filter-button";
 
-        const heading = document.createElement("h3");
-        heading.textContent = category.title;
-
-        const description = document.createElement("p");
-        description.textContent = category.description;
-
-        const workList = document.createElement("div");
-        workList.className = "work-list";
-
-        if (!category.files || category.files.length === 0) {
-            const empty = document.createElement("div");
-            empty.className = "empty";
-            empty.textContent = "No files available yet.";
-            workList.appendChild(empty);
-        } else {
-            category.files.forEach(file => {
-                const item = document.createElement("div");
-                item.className = "work-item";
-
-                const name = document.createElement("span");
-                name.className = "work-name";
-                name.textContent = file.name;
-
-                const link = document.createElement("a");
-                link.className = "view-button";
-                link.href = file.path;
-                link.textContent = "View / Download";
-                link.target = "_blank";
-                link.rel = "noopener noreferrer";
-                link.download = "";
-
-                // Show a message if the file cannot be found.
-                link.addEventListener("click", () => {
-                    console.log("Opening file:", file.path);
-                });
-
-                item.appendChild(name);
-                item.appendChild(link);
-                workList.appendChild(item);
-            });
+        if (category === activeCategory) {
+            button.classList.add("active");
         }
 
-        // Display the number of files in each category.
-        const count = document.createElement("p");
-        count.className = "file-count";
-        count.textContent =
-            `${category.files.length} file(s) uploaded`;
+        button.textContent = category;
+        button.setAttribute(
+            "aria-pressed",
+            String(category === activeCategory)
+        );
 
-        card.appendChild(number);
-        card.appendChild(heading);
-        card.appendChild(description);
-        card.appendChild(count);
-        card.appendChild(workList);
+        button.addEventListener("click", function() {
+            activeCategory = category;
+            createFilters();
+            displayWorks();
+        });
 
-        categoriesContainer.appendChild(card);
+        filters.appendChild(button);
     });
 }
 
+// Display academic works
+function displayWorks() {
+    worksGrid.replaceChildren();
 
-/* =========================================
-   INITIALIZE
-========================================= */
+    const filteredWorks = academicWorks.filter(function(work) {
+        return activeCategory === "All Works" ||
+               work.category === activeCategory;
+    });
 
-if (document.readyState === "loading") {
-    document.addEventListener(
-        "DOMContentLoaded",
-        createCategories
-    );
-} else {
-    createCategories();
+    filteredWorks.forEach(function(work) {
+        const card = document.createElement("article");
+        card.className = "work-card";
+
+        const icon = document.createElement("div");
+        icon.className = "work-icon";
+        icon.textContent = categoryIcons[work.category] || "▧";
+
+        const category = document.createElement("p");
+        category.className = "work-category";
+        category.textContent = work.category;
+
+        const title = document.createElement("h3");
+        title.textContent = work.title;
+
+        const description = document.createElement("p");
+        description.className = "work-description";
+        description.textContent = work.description;
+
+        const actions = document.createElement("div");
+        actions.className = "work-actions";
+
+        const viewLink = document.createElement("a");
+        viewLink.className = "work-link view";
+        viewLink.href = work.file;
+        viewLink.target = "_blank";
+        viewLink.rel = "noopener noreferrer";
+        viewLink.textContent =
+            work.type === "image" ? "View Image ↗" : "View File ↗";
+
+        const downloadLink = document.createElement("a");
+        downloadLink.className = "work-link";
+        downloadLink.href = work.file;
+        downloadLink.setAttribute("download", "");
+        downloadLink.textContent = "Download ↓";
+
+        actions.appendChild(viewLink);
+        actions.appendChild(downloadLink);
+
+        card.appendChild(icon);
+        card.appendChild(category);
+        card.appendChild(title);
+        card.appendChild(description);
+        card.appendChild(actions);
+
+        worksGrid.appendChild(card);
+    });
+
+    emptyMessage.hidden = filteredWorks.length > 0;
+    worksGrid.hidden = filteredWorks.length === 0;
 }
+
+// Mobile navigation
+const menuToggle = document.getElementById("menuToggle");
+const navbar = document.getElementById("navbar");
+
+menuToggle.addEventListener("click", function() {
+    navbar.classList.toggle("open");
+});
+
+navbar.querySelectorAll("a").forEach(function(link) {
+    link.addEventListener("click", function() {
+        navbar.classList.remove("open");
+    });
+});
+
+// Initialize the portfolio
+createFilters();
+displayWorks();
