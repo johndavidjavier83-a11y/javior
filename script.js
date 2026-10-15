@@ -1,29 +1,28 @@
 
-const academicWorks = [
+/* =========================================
+   ACADEMIC WORKS
+========================================= */
 
-    
+const academicWorks = [
     {
         title: "Quiz",
         description: "Collection of my quizzes and short assessments.",
         files: [
             {
-                name: "quiz 1",
+                name: "Quiz 1",
                 path: "quiz1.jpeg.JPG"
             },
             {
-                name: "Quiz",
-                path: "quiz1.jpeg.JPG",
+                name: "Quiz 2",
+                path: "quiz1.jpeg.JPG"
             },
             {
                 name: "Quiz Picture",
-                path: "quiz1.jpeg.JPG",
-            
-        
+                path: "quiz1.jpeg.JPG"
+            }
+        ]
     },
 
-    // =========================
-    // LONG QUIZ
-    // ====Quiz.png.jfif=====================
     {
         title: "Long Quiz",
         description: "Collection of my long quizzes and assessments.",
@@ -39,9 +38,6 @@ const academicWorks = [
         ]
     },
 
-    // =========================
-    // MIDTERMS
-    // =========================
     {
         title: "Midterms",
         description: "My midterm examination works and files.",
@@ -57,9 +53,6 @@ const academicWorks = [
         ]
     },
 
-    // =========================
-    // FINALS
-    // =========================
     {
         title: "Finals",
         description: "My final examination works and requirements.",
@@ -75,9 +68,6 @@ const academicWorks = [
         ]
     },
 
-    // =========================
-    // ACTIVITY
-    // =========================
     {
         title: "Activity",
         description: "Collection of my academic activities and assignments.",
@@ -97,9 +87,12 @@ const academicWorks = [
         ]
     },
 
-    // =========================
-    // PROJECT
-    // =========================
+    {
+        title: "Laboratory",
+        description: "My programming laboratory activities and outputs.",
+        files: []
+    },
+
     {
         title: "Project",
         description: "Collection of my projects and major academic outputs.",
@@ -117,107 +110,98 @@ const academicWorks = [
 ];
 
 
-/* =====================================================
+/* =========================================
    CREATE CATEGORY CARDS
-===================================================== */
+========================================= */
 
 const categoriesContainer = document.getElementById("categories");
 
-
 function createCategories() {
-
-    // Check if categories element exists
     if (!categoriesContainer) {
-        console.error("ERROR: Element with id='categories' was not found.");
+        console.error(
+            "Element with id='categories' was not found."
+        );
         return;
     }
 
     categoriesContainer.innerHTML = "";
 
     academicWorks.forEach((category, index) => {
-
         const card = document.createElement("div");
-
         card.className = "category-card";
 
+        const number = document.createElement("div");
+        number.className = "category-number";
+        number.textContent = String(index + 1).padStart(2, "0");
 
-        /* =================================================
-           FILE LIST
-        ================================================= */
+        const heading = document.createElement("h3");
+        heading.textContent = category.title;
 
-        let fileHTML = "";
+        const description = document.createElement("p");
+        description.textContent = category.description;
+
+        const workList = document.createElement("div");
+        workList.className = "work-list";
 
         if (!category.files || category.files.length === 0) {
-
-            fileHTML = `
-                <div class="empty">
-                    No files available yet.
-                </div>
-            `;
-
+            const empty = document.createElement("div");
+            empty.className = "empty";
+            empty.textContent = "No files available yet.";
+            workList.appendChild(empty);
         } else {
-
             category.files.forEach(file => {
+                const item = document.createElement("div");
+                item.className = "work-item";
 
-                fileHTML += `
-                    <div class="work-item">
+                const name = document.createElement("span");
+                name.className = "work-name";
+                name.textContent = file.name;
 
-                        <span class="work-name">
-                            ${file.name}
-                        </span>
+                const link = document.createElement("a");
+                link.className = "view-button";
+                link.href = file.path;
+                link.textContent = "View / Download";
+                link.target = "_blank";
+                link.rel = "noopener noreferrer";
+                link.download = "";
 
-                        <a
-                            class="view-button"
-                            href="${file.path}"
-                            target="_blank"
-                            download
-                        >
-                            View / Download
-                        </a>
+                // Show a message if the file cannot be found.
+                link.addEventListener("click", () => {
+                    console.log("Opening file:", file.path);
+                });
 
-                    </div>
-                `;
-
+                item.appendChild(name);
+                item.appendChild(link);
+                workList.appendChild(item);
             });
-
         }
 
+        // Display the number of files in each category.
+        const count = document.createElement("p");
+        count.className = "file-count";
+        count.textContent =
+            `${category.files.length} file(s) uploaded`;
 
-        /* =================================================
-           CATEGORY CARD
-        ================================================= */
-
-        card.innerHTML = `
-
-            <div class="category-number">
-                ${String(index + 1).padStart(2, "0")}
-            </div>
-
-            <h3>
-                ${category.title}
-            </h3>
-
-            <p>
-                ${category.description}
-            </p>
-
-            <div class="work-list">
-                ${fileHTML}
-            </div>
-
-        `;
-
+        card.appendChild(number);
+        card.appendChild(heading);
+        card.appendChild(description);
+        card.appendChild(count);
+        card.appendChild(workList);
 
         categoriesContainer.appendChild(card);
-
     });
-
 }
 
 
-/* =====================================================
-   DISPLAY ACADEMIC WORKS
-===================================================== */
+/* =========================================
+   INITIALIZE
+========================================= */
 
-createCategories();
-```
+if (document.readyState === "loading") {
+    document.addEventListener(
+        "DOMContentLoaded",
+        createCategories
+    );
+} else {
+    createCategories();
+}
